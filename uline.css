@@ -1,0 +1,124 @@
+body {
+    background-color: rgb(173, 203, 221);
+    /* background-color: #62b1c5; */
+    font-size: 100%
+}
+
+p {
+    background-color: rgb(158, 74, 123);
+    margin: 5px;
+}
+
+.regtxt,
+.ln-fx-con {
+    background-color: rgb(207, 178, 98);
+    margin: 10px;
+    padding: 10px;
+    font-size: 150%;
+}
+
+span {
+    text-decoration: none;
+}
+
+.myuline::before {
+    content: "...";
+    position: absolute;
+    font-size: 125%;
+    left: -0.1rem;
+    bottom: -35%;
+    color: rgb(49, 156, 16);
+}
+
+.myuline::after {
+    content: '\02FC';
+    position: absolute;
+    font-size: 125%;
+    right: -0.3rem;
+    bottom: -15%;
+    color: rgb(49, 156, 16);
+}
+
+.myuline {
+    display: inline-block;
+    position: relative;
+    /* padding: 10px, 10px; */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+/* line flex container - for entire line */
+
+.ln-fx-con {
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    align-items: top;
+}
+
+
+/* flex container for non underlineed text */
+
+.noul-fx-con {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: top;
+    padding-right: .8rem;
+    margin-top: 0px;
+}
+
+div.noul-fx-con>div {
+    padding-right: .5rem;
+}
+
+
+/* flex container for only the underlined words */
+
+.ul-fx-con {
+    display: flex;
+    padding-right: .8rem;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 0px;
+}
+
+
+/* Flex underline characters class - class name short becaused used a lot*/
+
+.fuln {
+    padding: 0;
+    margin-top: -22px;
+    color: rgb(49, 156, 16);
+    font-size: 125%;
+}
+
+
+/* Flex text being underlined  class - class name short becaused used a lot*/
+
+.fulntxt {
+    margin-top: -0.25rem;
+    position: relative;
+    top: 0px;
+    font-style: 100%;
+}
+
+.fulntxt::after {
+    content: '\02FC';
+    font-size: 125%;
+    color: rgb(49, 156, 16);
+    position: relative;
+    top: 5px;
+}
+
+.fulntxt::before {
+    content: '\02FB';
+    font-size: 125%;
+    color: rgb(49, 156, 16);
+    position: relative;
+    top: 5px;
+}
