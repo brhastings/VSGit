@@ -48,7 +48,7 @@ span {
 }
 
 
-/* line flex container - for entire line */
+/* line flex container - for entire line - default for non underlined words*/
 
 .ln-fx-con {
     display: flex;
@@ -57,22 +57,24 @@ span {
     flex-wrap: wrap;
     margin-top: 0px;
     align-items: top;
-}
-
-
-/* flex container for non underlineed text */
-
-.noul-fx-con {
-    display: flex;
-    flex-flow: row;
     justify-content: flex-start;
     align-items: top;
-    padding-right: .8rem;
-    margin-top: 0px;
+    /* padding-right: .8rem; */
 }
 
-div.noul-fx-con>div {
+
+/* The padding right provides space between the words, otherwise the run together
+The height is to add space at the under a line with no underlining to make
+all line spacing the same */
+
+div.ln-fx-con>div {
     padding-right: .5rem;
+    padding-bottom: 0px;
+    height: 2rem;
+}
+
+div.ul-fx-con {
+    padding-bottom: 0;
 }
 
 
@@ -80,11 +82,12 @@ div.noul-fx-con>div {
 
 .ul-fx-con {
     display: flex;
-    padding-right: .8rem;
+    padding: 0;
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
     margin-top: 0px;
+    padding-bottom: 0;
 }
 
 
@@ -100,11 +103,15 @@ div.noul-fx-con>div {
 
 /* Flex text being underlined  class - class name short becaused used a lot*/
 
+
+/* The negative margin aligns the text with the non-underlined text in the line */
+
 .fulntxt {
-    margin-top: -0.25rem;
+    margin-top: -0.4rem;
     position: relative;
     top: 0px;
     font-style: 100%;
+    padding: 0;
 }
 
 .fulntxt::after {
